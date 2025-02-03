@@ -3,8 +3,7 @@ import { ChevronDown } from "lucide-react";
 import { useTheme } from "next-themes";
 
 const Hero = () => {
-  const { theme, setTheme } = useTheme();
-  const isDark = theme === 'dark';
+  const { theme } = useTheme();
 
   return (
     <section className="min-h-screen flex flex-col items-center justify-center px-4 relative">
@@ -16,7 +15,7 @@ const Hero = () => {
         >
           <div className="w-[250px] h-[250px] md:w-[300px] md:h-[300px] rounded-full overflow-hidden mx-auto mb-8">
             <img 
-              src={isDark 
+              src={theme === 'dark' 
                 ? "/lovable-uploads/93dde3a3-9d2e-4175-b787-404c5d481cea.png"
                 : "/lovable-uploads/f2766dbd-a473-4fd2-b01d-99800268e491.png"
               }

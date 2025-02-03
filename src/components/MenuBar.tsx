@@ -1,12 +1,11 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Moon, Sun } from "lucide-react";
-import { useTheme } from "next-themes";
 
 const MenuBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,12 +15,20 @@ const MenuBar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [isDarkMode]);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const toggleDarkMode = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
+    setIsDarkMode(!isDarkMode);
   };
 
   return (
@@ -29,9 +36,7 @@ const MenuBar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? "bg-[#f5f5f8]/80 backdrop-blur-md shadow-sm dark:bg-[#444444]/80" 
-          : "bg-[#f5f5f8]/40 backdrop-blur-sm dark:bg-[#444444]/40"
+        isScrolled ? "bg-[#f5f5f8]/80 backdrop-blur-md shadow-sm dark:bg-gray-900/80" : "bg-[#f5f5f8]/40 backdrop-blur-sm dark:bg-gray-900/40"
       }`}
     >
       <nav className="max-w-7xl mx-auto">
@@ -44,7 +49,7 @@ const MenuBar = () => {
               onClick={toggleDarkMode}
               className="p-2"
             >
-              {theme === "dark" ? (
+              {isDarkMode ? (
                 <Moon className="h-5 w-5 text-white" />
               ) : (
                 <Sun className="h-5 w-5" />
@@ -99,7 +104,7 @@ const MenuBar = () => {
             onClick={toggleDarkMode}
             className="hidden md:block p-2"
           >
-            {theme === "dark" ? (
+            {isDarkMode ? (
               <Moon className="h-5 w-5 text-white" />
             ) : (
               <Sun className="h-5 w-5" />
