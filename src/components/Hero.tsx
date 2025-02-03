@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { useTheme } from "next-themes";
+import { useState } from "react";
 
 const Hero = () => {
   const { theme } = useTheme();
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <section className="min-h-screen flex flex-col items-center justify-center px-4 relative">
@@ -13,11 +15,17 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="w-[250px] h-[250px] md:w-[300px] md:h-[300px] rounded-full overflow-hidden mx-auto mb-8">
+          <div 
+            className="w-[250px] h-[250px] md:w-[300px] md:h-[300px] rounded-full overflow-hidden mx-auto mb-8 cursor-pointer transition-all duration-300"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
             <img 
-              src={theme === 'dark' 
-                ? "/lovable-uploads/93dde3a3-9d2e-4175-b787-404c5d481cea.png"
-                : "/lovable-uploads/f2766dbd-a473-4fd2-b01d-99800268e491.png"
+              src={isHovered 
+                ? "/lovable-uploads/993e0342-f75a-426f-a345-09700c730629.png"
+                : theme === 'dark' 
+                  ? "/lovable-uploads/93dde3a3-9d2e-4175-b787-404c5d481cea.png"
+                  : "/lovable-uploads/f2766dbd-a473-4fd2-b01d-99800268e491.png"
               }
               alt="Profile"
               className="w-full h-full object-cover"
