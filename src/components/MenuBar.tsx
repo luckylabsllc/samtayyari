@@ -86,12 +86,13 @@ const MenuBar = () => {
               <a href="#about">About</a>
             </motion.li>
             <motion.li whileHover={{ opacity: 0.7 }} className="cursor-pointer">
-              <a href={isDarkMode ? "#projects" : "#proceedings"}>
-                {isDarkMode ? "Projects" : "Proceedings"}
-              </a>
+              <a href="#projects">Projects</a>
             </motion.li>
             <motion.li whileHover={{ opacity: 0.7 }} className="cursor-pointer">
               <a href="#writings">Writings</a>
+            </motion.li>
+            <motion.li whileHover={{ opacity: 0.7 }} className="cursor-pointer">
+              <a href="#consulting">Consulting</a>
             </motion.li>
             <motion.li whileHover={{ opacity: 0.7 }} className="cursor-pointer">
               <a href="#contact">Contact</a>
@@ -117,12 +118,9 @@ const MenuBar = () => {
             <ul className="px-4 py-2 space-y-2">
               <li className="py-2"><a onClick={scrollToTop} className="block">Home</a></li>
               <li className="py-2"><a href="#about" className="block">About</a></li>
-              <li className="py-2">
-                <a href={isDarkMode ? "#projects" : "#proceedings"} className="block">
-                  {isDarkMode ? "Projects" : "Proceedings"}
-                </a>
-              </li>
+              <li className="py-2"><a href="#projects" className="block">Projects</a></li>
               <li className="py-2"><a href="#writings" className="block">Writings</a></li>
+              <li className="py-2"><a href="#consulting" className="block">Consulting</a></li>
               <li className="py-2"><a href="#contact" className="block">Contact</a></li>
             </ul>
           </div>

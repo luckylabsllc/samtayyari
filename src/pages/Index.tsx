@@ -1,9 +1,9 @@
-import Navigation from "@/components/Navigation";
+import MenuBar from "@/components/MenuBar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
-import MenuBar from "@/components/MenuBar";
+import Consulting from "@/components/Consulting";
 
 const Index = () => {
   return (
@@ -12,6 +12,7 @@ const Index = () => {
       <Hero />
       <About />
       <Projects />
+      <Consulting />
       <Contact />
     </div>
   );
