@@ -17,7 +17,7 @@ const Hero = () => {
               className="w-full h-full object-cover"
             />
           </div>
-          <span className="inline-block px-3 py-1 text-sm bg-accent rounded-full text-secondary mb-6">
+          <span className="inline-block px-3 py-1 text-sm bg-accent rounded-full text-secondary mb-6 hover:bg-accent/80 transition-colors duration-200">
             Entrepreneur & Legal Professional
           </span>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">

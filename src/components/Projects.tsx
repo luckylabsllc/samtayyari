@@ -38,7 +38,7 @@ const Projects = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <span className="inline-block px-3 py-1 text-sm bg-accent rounded-full text-secondary mb-6">
+          <span className="inline-block px-3 py-1 text-sm bg-accent rounded-full text-secondary mb-6 hover:bg-accent/80 transition-colors duration-200">
             Projects
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-12">Featured Work</h2>
