@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
-import { ExternalLink } from "lucide-react";
+import { ShoppingCart } from "lucide-react";
 
 const BookPromo = () => {
   return (
@@ -24,9 +24,11 @@ const BookPromo = () => {
           
           <div className="flex flex-col md:flex-row items-center justify-center gap-8">
             <div className="w-64 h-80 bg-accent dark:bg-[#222222] rounded-lg overflow-hidden">
-              <div className="w-full h-full flex items-center justify-center text-secondary">
-                Book Cover Preview
-              </div>
+              <img 
+                src="https://public-files.gumroad.com/767bugkpe68tfw7uawlimkcq5yvx" 
+                alt="Formidable MidJourney Book Cover"
+                className="w-full h-full object-cover"
+              />
             </div>
             
             <div className="max-w-sm space-y-6">
@@ -42,9 +44,9 @@ const BookPromo = () => {
               
               <Button
                 className="w-full sm:w-auto"
-                onClick={() => window.open("https://ch4rms.gumroad.com/l/ch4rmsformidjourney", "_blank")}
+                onClick={() => window.open("https://gumroad.com/checkout?product=iximt&quantity=1", "_blank")}
               >
-                Learn More <ExternalLink className="ml-2 h-4 w-4" />
+                Buy Now <ShoppingCart className="ml-2 h-4 w-4" />
               </Button>
             </div>
           </div>
