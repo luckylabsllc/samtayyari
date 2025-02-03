@@ -43,37 +43,39 @@ const MenuBar = () => {
         <div className="flex items-center justify-between px-4 h-16">
           <div className="font-bold text-lg dark:text-white">Sam Tayyari</div>
           
-          {/* Mobile dark mode toggle */}
-          <button
-            onClick={toggleDarkMode}
-            className="md:hidden p-2"
-          >
-            {isDarkMode ? (
-              <Sun className="h-5 w-5 text-white" />
-            ) : (
-              <Moon className="h-5 w-5" />
-            )}
-          </button>
-
-          {/* Mobile menu button */}
-          <button
-            className="md:hidden p-2 ml-2"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+          <div className="flex items-center gap-2 md:hidden">
+            {/* Mobile dark mode toggle */}
+            <button
+              onClick={toggleDarkMode}
+              className="p-2"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d={isMobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
-              />
-            </svg>
-          </button>
+              {isDarkMode ? (
+                <Moon className="h-5 w-5 text-white" />
+              ) : (
+                <Sun className="h-5 w-5" />
+              )}
+            </button>
+
+            {/* Mobile menu button */}
+            <button
+              className="p-2"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d={isMobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+                />
+              </svg>
+            </button>
+          </div>
 
           {/* Desktop menu */}
           <ul className="hidden md:flex items-center justify-center space-x-8 text-xs absolute left-1/2 transform -translate-x-1/2">
@@ -102,9 +104,9 @@ const MenuBar = () => {
             className="hidden md:block p-2"
           >
             {isDarkMode ? (
-              <Sun className="h-5 w-5 text-white" />
+              <Moon className="h-5 w-5 text-white" />
             ) : (
-              <Moon className="h-5 w-5" />
+              <Sun className="h-5 w-5" />
             )}
           </button>
         </div>
