@@ -10,7 +10,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="w-[350px] h-[350px] md:w-[350px] md:h-[350px] rounded-full overflow-hidden mx-auto mb-8">
+          <div className="w-[250px] h-[250px] md:w-[300px] md:h-[300px] rounded-full overflow-hidden mx-auto mb-8">
             <img 
               src="/lovable-uploads/f2766dbd-a473-4fd2-b01d-99800268e491.png" 
               alt="Profile"
