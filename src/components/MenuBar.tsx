@@ -39,9 +39,20 @@ const MenuBar = () => {
         <div className="flex items-center justify-between px-4 h-16">
           <div className="font-bold text-lg dark:text-white">Sam Tayyari</div>
           
+          {/* Mobile toggle switch */}
+          <div className="md:hidden flex items-center space-x-2">
+            <span className="font-bold text-xs">Legal</span>
+            <Switch
+              checked={isDarkMode}
+              onCheckedChange={setIsDarkMode}
+              className="data-[state=checked]:bg-gray-800"
+            />
+            <span className="font-bold text-xs">Business</span>
+          </div>
+
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-2 ml-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             <svg
@@ -80,7 +91,7 @@ const MenuBar = () => {
             </motion.li>
           </ul>
 
-          {/* Toggle switch */}
+          {/* Desktop toggle switch */}
           <div className="hidden md:flex items-center space-x-4">
             <span className="font-bold text-sm">Legal</span>
             <Switch
@@ -105,17 +116,6 @@ const MenuBar = () => {
               </li>
               <li className="py-2"><a href="#writings" className="block">Writings</a></li>
               <li className="py-2"><a href="#contact" className="block">Contact</a></li>
-              <li className="py-4">
-                <div className="flex items-center justify-center space-x-4">
-                  <span className="font-bold text-sm">Legal</span>
-                  <Switch
-                    checked={isDarkMode}
-                    onCheckedChange={setIsDarkMode}
-                    className="data-[state=checked]:bg-gray-800"
-                  />
-                  <span className="font-bold text-sm">Business</span>
-                </div>
-              </li>
             </ul>
           </div>
         )}
