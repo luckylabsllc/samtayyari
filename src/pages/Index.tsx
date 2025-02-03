@@ -7,7 +7,7 @@ import MenuBar from "@/components/MenuBar";
 
 const Index = () => {
   return (
-    <div className="bg-white">
+    <div className="min-h-screen bg-white dark:bg-[#111111] transition-colors duration-300">
       <MenuBar />
       <Hero />
       <About />
