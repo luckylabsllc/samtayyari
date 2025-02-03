@@ -12,7 +12,6 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically handle the form submission
     toast({
       title: "Message Sent",
       description: "Thank you for your message. I'll get back to you soon.",
@@ -21,7 +20,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-4 bg-accent dark:bg-[#222222]">
+    <section id="contact" className="py-20 px-4 bg-white">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

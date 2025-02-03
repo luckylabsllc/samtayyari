@@ -4,7 +4,7 @@ import { ShoppingCart } from "lucide-react";
 
 const BookPromo = () => {
   return (
-    <section className="py-20 px-4 bg-white dark:bg-[#111111]">
+    <section className="py-20 px-4 bg-[#222222] text-white">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
