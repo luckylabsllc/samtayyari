@@ -43,10 +43,10 @@ const BookPromo = () => {
               </div>
               
               <Button
-                className="w-full sm:w-auto"
+                className="w-full sm:w-auto bg-[#8B5CF6] hover:bg-[#7C3AED]"
                 onClick={() => window.open("https://gumroad.com/checkout?product=iximt&quantity=1", "_blank")}
               >
-                Buy Now <ShoppingCart className="ml-2 h-4 w-4" />
+                Buy Digital Edition Now <ShoppingCart className="ml-2 h-4 w-4" />
               </Button>
             </div>
           </div>
