@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center px-4">
+    <section className="min-h-screen flex flex-col items-center justify-center px-4 relative">
       <div className="max-w-4xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -32,6 +33,33 @@ const Hero = () => {
           </motion.div>
         </motion.div>
       </div>
+      
+      <motion.div 
+        className="absolute bottom-8"
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ 
+          opacity: 1,
+          y: 0,
+        }}
+        transition={{
+          duration: 1,
+          delay: 1,
+        }}
+      >
+        <motion.div
+          animate={{ 
+            y: [0, 8, 0],
+          }}
+          transition={{
+            duration: 1.5,
+            repeat: Infinity,
+            repeatType: "reverse",
+            ease: "easeInOut"
+          }}
+        >
+          <ChevronDown className="w-8 h-8 text-secondary" />
+        </motion.div>
+      </motion.div>
     </section>
   );
 };
