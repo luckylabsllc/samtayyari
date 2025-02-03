@@ -16,17 +16,17 @@ const BookPromo = () => {
           <span className="inline-block px-3 py-1 text-sm bg-accent dark:bg-[#333333] rounded-full text-secondary mb-6 hover:opacity-80 transition-all duration-200">
             New Book
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Formidable MidJourney</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">CH4RMS: AI Art Prompts for Midjourney</h2>
           <p className="text-secondary mb-8 max-w-2xl mx-auto">
-            Discover the secrets of creating stunning AI-generated artwork with MidJourney. 
-            A comprehensive guide to mastering AI art creation.
+            Dive into the captivating world of AI-generated art with CH4RMS, an innovative guide designed for both artists and tech enthusiasts. 
+            This book combines cutting-edge technology with creative inspiration, offering over 480 pages of stunning visual prompts crafted with Midjourney.
           </p>
           
           <div className="flex flex-col md:flex-row items-center justify-center gap-8">
             <div className="w-64 h-80 bg-accent dark:bg-[#222222] rounded-lg overflow-hidden">
               <img 
                 src="https://public-files.gumroad.com/767bugkpe68tfw7uawlimkcq5yvx" 
-                alt="Formidable MidJourney Book Cover"
+                alt="CH4RMS: AI Art Prompts for Midjourney Book Cover"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -35,10 +35,10 @@ const BookPromo = () => {
               <div className="space-y-4">
                 <h3 className="text-xl font-semibold">What's Inside:</h3>
                 <ul className="space-y-2 text-secondary">
-                  <li>• Comprehensive MidJourney tutorials</li>
-                  <li>• Advanced techniques and tips</li>
-                  <li>• Real-world examples and case studies</li>
-                  <li>• Professional workflow strategies</li>
+                  <li>• Over 480 pages of stunning visual prompts</li>
+                  <li>• Comprehensive guide for Midjourney v6.0 and v6.1</li>
+                  <li>• Perfect for both artists and tech enthusiasts</li>
+                  <li>• Tools to transform ideas into digital masterpieces</li>
                 </ul>
               </div>
               
