@@ -21,7 +21,7 @@ const MenuBar = () => {
       }`}
     >
       <nav className="max-w-7xl mx-auto">
-        <ul className="flex items-center justify-center h-12 px-4 space-x-8 text-sm">
+        <ul className="flex items-center justify-center h-12 px-4 space-x-8 text-xs">
           <motion.li
             whileHover={{ opacity: 0.7 }}
             className="cursor-pointer"
