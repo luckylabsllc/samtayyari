@@ -10,6 +10,13 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
+          <div className="w-[500px] h-[500px] rounded-full overflow-hidden mx-auto mb-8">
+            <img 
+              src="/lovable-uploads/f2766dbd-a473-4fd2-b01d-99800268e491.png" 
+              alt="Profile"
+              className="w-full h-full object-cover"
+            />
+          </div>
           <span className="inline-block px-3 py-1 text-sm bg-accent rounded-full text-secondary mb-6">
             Entrepreneur & Legal Professional
           </span>
