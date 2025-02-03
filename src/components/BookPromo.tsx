@@ -4,7 +4,7 @@ import { ShoppingCart } from "lucide-react";
 
 const BookPromo = () => {
   return (
-    <section className="py-20 px-4 bg-[#222222] dark:bg-[#222222] text-white">
+    <section className="py-20 px-4 bg-accent dark:bg-[#222222] text-primary dark:text-white">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -13,7 +13,7 @@ const BookPromo = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <span className="inline-block px-3 py-1 text-sm bg-accent dark:bg-[#333333] rounded-full text-secondary mb-6 hover:opacity-80 transition-all duration-200">
+          <span className="inline-block px-3 py-1 text-sm bg-white dark:bg-[#333333] rounded-full text-secondary mb-6 hover:opacity-80 transition-all duration-200">
             Buy My Book
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">CH4RMS: AI Art Prompts for Midjourney</h2>
@@ -23,7 +23,7 @@ const BookPromo = () => {
           </p>
           
           <div className="flex flex-col md:flex-row items-center justify-center gap-8">
-            <div className="w-64 h-80 bg-accent dark:bg-[#222222] rounded-lg overflow-hidden">
+            <div className="w-64 h-80 bg-white dark:bg-[#222222] rounded-lg overflow-hidden">
               <img 
                 src="https://public-files.gumroad.com/767bugkpe68tfw7uawlimkcq5yvx" 
                 alt="CH4RMS: AI Art Prompts for Midjourney Book Cover"
