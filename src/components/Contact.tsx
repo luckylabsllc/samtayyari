@@ -21,7 +21,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-4 bg-accent">
+    <section id="contact" className="py-20 px-4 bg-accent dark:bg-[#222222]">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -29,11 +29,11 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <span className="inline-block px-3 py-1 text-sm bg-white rounded-full text-secondary mb-6">
+          <span className="inline-block px-3 py-1 text-sm bg-white dark:bg-[#333333] rounded-full text-secondary mb-6">
             Contact
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-12">Get in Touch</h2>
-          <div className="bg-white/80 backdrop-blur-sm rounded-lg p-8">
+          <div className="bg-white/80 dark:bg-[#333333]/80 backdrop-blur-sm rounded-lg p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-secondary mb-2">
@@ -44,7 +44,7 @@ const Contact = () => {
                   id="name"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-2 rounded-lg border border-muted focus:outline-none focus:ring-2 focus:ring-primary/20"
+                  className="w-full px-4 py-2 rounded-lg border border-muted focus:outline-none focus:ring-2 focus:ring-primary/20 dark:bg-[#222222] dark:border-[#444444]"
                   required
                 />
               </div>
@@ -57,7 +57,7 @@ const Contact = () => {
                   id="email"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-2 rounded-lg border border-muted focus:outline-none focus:ring-2 focus:ring-primary/20"
+                  className="w-full px-4 py-2 rounded-lg border border-muted focus:outline-none focus:ring-2 focus:ring-primary/20 dark:bg-[#222222] dark:border-[#444444]"
                   required
                 />
               </div>
@@ -70,7 +70,7 @@ const Contact = () => {
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   rows={4}
-                  className="w-full px-4 py-2 rounded-lg border border-muted focus:outline-none focus:ring-2 focus:ring-primary/20"
+                  className="w-full px-4 py-2 rounded-lg border border-muted focus:outline-none focus:ring-2 focus:ring-primary/20 dark:bg-[#222222] dark:border-[#444444]"
                   required
                 ></textarea>
               </div>

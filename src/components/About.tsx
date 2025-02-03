@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <section id="about" className="py-20 px-4 bg-accent">
+    <section id="about" className="py-20 px-4 bg-accent dark:bg-[#222222]">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -10,7 +10,7 @@ const About = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <span className="inline-block px-3 py-1 text-sm bg-white rounded-full text-secondary mb-6">
+          <span className="inline-block px-3 py-1 text-sm bg-white dark:bg-[#333333] rounded-full text-secondary mb-6">
             About Me
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-8">
@@ -26,7 +26,7 @@ const About = () => {
               </p>
             </div>
             <div className="space-y-6">
-              <div className="bg-white p-6 rounded-lg">
+              <div className="bg-white dark:bg-[#333333] p-6 rounded-lg">
                 <h3 className="font-semibold mb-4">Legal Expertise</h3>
                 <ul className="space-y-2 text-secondary">
                   <li>Corporate Law</li>
@@ -34,7 +34,7 @@ const About = () => {
                   <li>Contract Negotiation</li>
                 </ul>
               </div>
-              <div className="bg-white p-6 rounded-lg">
+              <div className="bg-white dark:bg-[#333333] p-6 rounded-lg">
                 <h3 className="font-semibold mb-4">Entrepreneurial Focus</h3>
                 <ul className="space-y-2 text-secondary">
                   <li>Business Strategy</li>
