@@ -36,8 +36,9 @@ const MenuBar = () => {
       }`}
     >
       <nav className="max-w-7xl mx-auto">
-        <div className="flex items-center justify-between px-4">
-          <ul className="flex items-center justify-center h-12 space-x-8 text-xs">
+        <div className="flex items-center justify-between px-4 h-16">
+          <div className="font-bold text-lg dark:text-white">Sam Tayyari</div>
+          <ul className="flex items-center justify-center space-x-8 text-xs absolute left-1/2 transform -translate-x-1/2">
             <motion.li
               whileHover={{ opacity: 0.7 }}
               className="cursor-pointer"
