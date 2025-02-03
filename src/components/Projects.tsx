@@ -38,7 +38,7 @@ const Projects = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <span className="inline-block px-3 py-1 text-sm bg-accent rounded-full text-secondary mb-6">
+          <span className="inline-block px-3 py-1 text-sm bg-background-secondary rounded-full text-secondary mb-6">
             Projects
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-12">Featured Work</h2>
@@ -50,11 +50,11 @@ const Projects = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="group relative bg-white p-6 rounded-lg hover:shadow-lg transition-all"
+                className="group relative bg-background p-6 rounded-lg hover:shadow-lg transition-all"
               >
-                <span className="text-sm text-secondary">{project.category}</span>
+                <span className="text-sm text-muted-foreground">{project.category}</span>
                 <h3 className="text-xl font-semibold mt-2 mb-3">{project.title}</h3>
-                <p className="text-secondary mb-4">{project.description}</p>
+                <p className="text-muted-foreground mb-4">{project.description}</p>
                 {project.link && (
                   <a
                     href={project.link}
