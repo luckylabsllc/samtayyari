@@ -12,6 +12,10 @@ const MenuBar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <motion.header
       initial={{ y: -100 }}
@@ -26,7 +30,7 @@ const MenuBar = () => {
             whileHover={{ opacity: 0.7 }}
             className="cursor-pointer"
           >
-            <a href="#home">Home</a>
+            <a onClick={scrollToTop}>Home</a>
           </motion.li>
           <motion.li
             whileHover={{ opacity: 0.7 }}
@@ -44,7 +48,7 @@ const MenuBar = () => {
             whileHover={{ opacity: 0.7 }}
             className="cursor-pointer"
           >
-            <a href="#resume">Resume</a>
+            <a href="#writings">Writings</a>
           </motion.li>
           <motion.li
             whileHover={{ opacity: 0.7 }}
