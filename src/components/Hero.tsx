@@ -1,13 +1,21 @@
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
   const { theme, resolvedTheme } = useTheme();
-  
-  // Use resolvedTheme to ensure we get the actual current theme
-  const currentTheme = resolvedTheme || theme;
+  const [mounted, setMounted] = useState(false);
 
+  // Wait until mounted to avoid hydration mismatch
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+  
   return (
     <section className="min-h-screen flex flex-col items-center justify-center px-4 relative">
       <div className="max-w-4xl mx-auto text-center">
@@ -18,7 +26,7 @@ const Hero = () => {
         >
           <div className="w-[250px] h-[250px] md:w-[300px] md:h-[300px] rounded-full overflow-hidden mx-auto mb-8">
             <img 
-              src={currentTheme === 'dark'
+              src={resolvedTheme === 'dark' 
                 ? "/lovable-uploads/993e0342-f75a-426f-a345-09700c730629.png"
                 : "/lovable-uploads/f2766dbd-a473-4fd2-b01d-99800268e491.png"
               }
