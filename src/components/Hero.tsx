@@ -23,7 +23,7 @@ const Hero = () => {
                 : "/lovable-uploads/f2766dbd-a473-4fd2-b01d-99800268e491.png"
               }
               alt="Profile"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover transition-all duration-300"
             />
           </div>
           <span className="inline-block px-3 py-1 text-sm bg-accent dark:bg-accent rounded-full text-secondary mb-6 hover:opacity-80 transition-all duration-200">
