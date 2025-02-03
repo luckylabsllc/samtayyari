@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import { Switch } from "@/components/ui/switch";
+import { Moon, Sun } from "lucide-react";
 
 const MenuBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,6 +27,10 @@ const MenuBar = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
   return (
     <motion.header
       initial={{ y: -100 }}
@@ -39,16 +43,17 @@ const MenuBar = () => {
         <div className="flex items-center justify-between px-4 h-16">
           <div className="font-bold text-lg dark:text-white">Sam Tayyari</div>
           
-          {/* Mobile toggle switch */}
-          <div className="md:hidden flex items-center space-x-2">
-            <span className="font-bold text-xs">Legal</span>
-            <Switch
-              checked={isDarkMode}
-              onCheckedChange={setIsDarkMode}
-              className="data-[state=checked]:bg-gray-800"
-            />
-            <span className="font-bold text-xs">Business</span>
-          </div>
+          {/* Mobile dark mode toggle */}
+          <button
+            onClick={toggleDarkMode}
+            className="md:hidden p-2"
+          >
+            {isDarkMode ? (
+              <Sun className="h-5 w-5 text-white" />
+            ) : (
+              <Moon className="h-5 w-5" />
+            )}
+          </button>
 
           {/* Mobile menu button */}
           <button
@@ -91,16 +96,17 @@ const MenuBar = () => {
             </motion.li>
           </ul>
 
-          {/* Desktop toggle switch */}
-          <div className="hidden md:flex items-center space-x-4">
-            <span className="font-bold text-sm">Legal</span>
-            <Switch
-              checked={isDarkMode}
-              onCheckedChange={setIsDarkMode}
-              className="data-[state=checked]:bg-gray-800"
-            />
-            <span className="font-bold text-sm">Business</span>
-          </div>
+          {/* Desktop dark mode toggle */}
+          <button
+            onClick={toggleDarkMode}
+            className="hidden md:block p-2"
+          >
+            {isDarkMode ? (
+              <Sun className="h-5 w-5 text-white" />
+            ) : (
+              <Moon className="h-5 w-5" />
+            )}
+          </button>
         </div>
 
         {/* Mobile menu */}
