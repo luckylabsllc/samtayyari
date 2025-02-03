@@ -1,4 +1,4 @@
-import { Copyright } from "lucide-react";
+import { Copyright, Instagram, Linkedin, X } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -10,17 +10,45 @@ const Footer = () => {
             <span className="font-bold text-lg mb-2 dark:text-white">Sam Tayyari</span>
           </div>
           <div className="flex flex-row justify-between items-center">
-            <div className="flex items-center space-x-1 text-sm text-gray-500">
-              <Copyright className="h-4 w-4" />
-              <span>2025 Sam Tayyari</span>
+            <div className="flex items-center gap-6">
+              <div className="flex items-center space-x-1 text-sm text-gray-500">
+                <Copyright className="h-4 w-4" />
+                <span>2025 Sam Tayyari</span>
+              </div>
+              <Link 
+                to="/privacy-policy" 
+                className="text-sm text-gray-500 hover:text-primary transition-colors"
+              >
+                Privacy Policy
+              </Link>
             </div>
             
-            <Link 
-              to="/privacy-policy" 
-              className="text-sm text-gray-500 hover:text-primary transition-colors"
-            >
-              Privacy Policy
-            </Link>
+            <div className="flex gap-4">
+              <a 
+                href="https://x.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-500 hover:text-primary transition-colors"
+              >
+                <X className="h-5 w-5" />
+              </a>
+              <a 
+                href="https://instagram.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-500 hover:text-primary transition-colors"
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a 
+                href="https://linkedin.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-500 hover:text-primary transition-colors"
+              >
+                <Linkedin className="h-5 w-5" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
