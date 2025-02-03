@@ -20,7 +20,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-4 bg-white">
+    <section id="contact" className="py-20 px-4 bg-white dark:bg-[#333333]">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -28,11 +28,11 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <span className="inline-block px-3 py-1 text-sm bg-white dark:bg-[#333333] rounded-full text-secondary mb-6 hover:opacity-80 transition-all duration-200">
+          <span className="inline-block px-3 py-1 text-sm bg-white dark:bg-[#444444] rounded-full text-secondary mb-6 hover:opacity-80 transition-colors duration-200">
             Contact
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-12">Get in Touch</h2>
-          <div className="bg-white/80 dark:bg-[#333333]/80 backdrop-blur-sm rounded-lg p-8">
+          <div className="bg-white/80 dark:bg-[#444444]/80 backdrop-blur-sm rounded-lg p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-secondary mb-2">

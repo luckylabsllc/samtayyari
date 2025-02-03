@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const Writing = () => {
   return (
-    <section className="py-20 px-4 bg-[#222222] text-white">
+    <section className="py-20 px-4 bg-[#222222] dark:bg-[#333333] text-white">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
