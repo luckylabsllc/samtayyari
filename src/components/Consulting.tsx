@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const Consulting = () => {
   return (
-    <section id="consulting" className="py-20 px-4 bg-accent dark:bg-[#333333]">
+    <section id="consulting" className="py-20 px-4">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -10,7 +10,7 @@ const Consulting = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <span className="inline-block px-3 py-1 text-sm bg-white dark:bg-[#444444] rounded-full text-secondary mb-6 hover:opacity-80 transition-colors duration-200">
+          <span className="inline-block px-3 py-1 text-sm bg-accent rounded-full text-secondary mb-6 hover:opacity-80 transition-colors duration-200">
             Consulting
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-12">Professional Services</h2>
