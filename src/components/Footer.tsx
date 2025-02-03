@@ -10,22 +10,20 @@ const Footer = () => {
             <span className="font-bold text-lg mb-2 dark:text-white">Sam Tayyari</span>
           </div>
           <div className="flex flex-row justify-between items-center">
-            <div className="flex items-center gap-6">
-              <div className="flex items-center space-x-1 text-sm text-gray-500">
-                <Copyright className="h-4 w-4" />
-                <span>2025 Sam Tayyari</span>
-              </div>
+            <div className="flex items-center space-x-1 text-sm text-gray-500">
+              <Copyright className="h-4 w-4" />
+              <span>2025 Sam Tayyari</span>
+            </div>
+            
+            <div className="flex items-center gap-4">
               <Link 
                 to="/privacy-policy" 
                 className="text-sm text-gray-500 hover:text-primary transition-colors"
               >
                 Privacy Policy
               </Link>
-            </div>
-            
-            <div className="flex gap-4">
               <a 
-                href="https://x.com" 
+                href="https://twitter.com/samtayyari" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-primary transition-colors"
