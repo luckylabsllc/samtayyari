@@ -14,7 +14,7 @@ const BookPromo = () => {
           className="text-center"
         >
           <span className="inline-block px-3 py-1 text-sm bg-accent dark:bg-[#333333] rounded-full text-secondary mb-6 hover:opacity-80 transition-all duration-200">
-            New Book
+            Buy My Book
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">CH4RMS: AI Art Prompts for Midjourney</h2>
           <p className="text-secondary mb-8 max-w-2xl mx-auto">
@@ -43,7 +43,7 @@ const BookPromo = () => {
               </div>
               
               <Button
-                className="w-full sm:w-auto bg-[#8B5CF6] hover:bg-[#7C3AED]"
+                className="w-full sm:w-auto bg-gradient-to-r from-[#8B5CF6] to-[#6D28D9] hover:from-[#7C3AED] hover:to-[#5B21B6]"
                 onClick={() => window.open("https://gumroad.com/checkout?product=iximt&quantity=1", "_blank")}
               >
                 Buy Digital Edition Now <ShoppingCart className="ml-2 h-4 w-4" />
