@@ -15,37 +15,39 @@ const Footer = () => {
               <span>2025 Sam Tayyari</span>
             </div>
             
-            <div className="flex items-center gap-4">
+            <div className="flex items-center">
               <Link 
                 to="/privacy-policy" 
-                className="text-sm text-gray-500 hover:text-primary transition-colors"
+                className="text-sm text-gray-500 hover:text-primary transition-colors mr-5"
               >
                 Privacy Policy
               </Link>
-              <a 
-                href="https://twitter.com/samtayyari" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-500 hover:text-primary transition-colors"
-              >
-                <X className="h-5 w-5" />
-              </a>
-              <a 
-                href="https://instagram.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-500 hover:text-primary transition-colors"
-              >
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a 
-                href="https://linkedin.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-500 hover:text-primary transition-colors"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
+              <div className="flex items-center gap-4">
+                <a 
+                  href="https://twitter.com/samtayyari" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-500 hover:text-primary transition-colors"
+                >
+                  <X className="h-5 w-5" />
+                </a>
+                <a 
+                  href="https://instagram.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-500 hover:text-primary transition-colors"
+                >
+                  <Instagram className="h-5 w-5" />
+                </a>
+                <a 
+                  href="https://www.linkedin.com/in/samtayyari" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-500 hover:text-primary transition-colors"
+                >
+                  <Linkedin className="h-5 w-5" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
