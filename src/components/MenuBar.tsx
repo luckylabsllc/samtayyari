@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import { Moon, Sun } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 
 const MenuBar = () => {
@@ -55,7 +54,9 @@ const MenuBar = () => {
               whileHover={{ opacity: 0.7 }}
               className="cursor-pointer"
             >
-              <a href="#projects">Projects</a>
+              <a href={isDarkMode ? "#projects" : "#proceedings"}>
+                {isDarkMode ? "Projects" : "Proceedings"}
+              </a>
             </motion.li>
             <motion.li
               whileHover={{ opacity: 0.7 }}
@@ -70,14 +71,14 @@ const MenuBar = () => {
               <a href="#contact">Contact</a>
             </motion.li>
           </ul>
-          <div className="flex items-center space-x-2">
-            <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-            <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+          <div className="flex items-center space-x-4">
+            <span className="font-bold text-sm">Legal</span>
             <Switch
               checked={isDarkMode}
               onCheckedChange={setIsDarkMode}
               className="data-[state=checked]:bg-gray-800"
             />
+            <span className="font-bold text-sm">Business</span>
           </div>
         </div>
       </nav>
