@@ -29,7 +29,7 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <span className="inline-block px-3 py-1 text-sm bg-white dark:bg-[#333333] rounded-full text-secondary mb-6 hover:bg-white/80 dark:hover:bg-[#333333]/80 transition-colors duration-200">
+          <span className="inline-block px-3 py-1 text-sm bg-white dark:bg-[#333333] rounded-full text-secondary mb-6 hover:opacity-80 transition-all duration-200">
             Contact
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-12">Get in Touch</h2>
