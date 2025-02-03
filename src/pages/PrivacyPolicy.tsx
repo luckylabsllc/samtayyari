@@ -1,8 +1,22 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const PrivacyPolicy = () => {
+  const navigate = useNavigate();
+
   return (
-    <div className="max-w-4xl mx-auto px-4 py-16">
+    <div className="relative max-w-4xl mx-auto px-4 py-16">
+      <Button
+        variant="ghost"
+        size="icon"
+        className="absolute right-4 top-4"
+        onClick={() => navigate('/')}
+      >
+        <X className="h-4 w-4" />
+        <span className="sr-only">Close</span>
+      </Button>
+
       <h1 className="text-3xl font-bold mb-8">Privacy Policy</h1>
       <div className="prose dark:prose-invert">
         <p className="mb-4">Last updated: January 2024</p>
