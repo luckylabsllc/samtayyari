@@ -19,10 +19,10 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-6">
               <p className="text-secondary leading-relaxed">
-                With a foundation in law and a passion for innovation, I bridge the gap between legal expertise and entrepreneurial ventures. My journey spans both worlds, allowing me to bring unique insights to every project.
+                I'm an entrepreneur, product developer, and soon to be licensed attorney. As the founder and creative director behind Lucky Labs, I'm building a catalog of intellectual property using the latest technology.
               </p>
               <p className="text-secondary leading-relaxed">
-                I focus on creating sustainable solutions while ensuring legal compliance and ethical business practices. This dual perspective enables me to navigate complex challenges effectively.
+                With a background in business and law, and a deep connection to the creative industry, I combine legal knowledge with hands-on entrepreneurship to create realistic solutions in pursuit of unrealistic goals.
               </p>
             </div>
             <div className="space-y-6">
