@@ -32,12 +32,11 @@ const MenuBar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/80 backdrop-blur-md shadow-sm" : "bg-background/40 backdrop-blur-sm"
+        isScrolled ? "bg-[#f5f5f8]/80 backdrop-blur-md shadow-sm dark:bg-gray-900/80" : "bg-[#f5f5f8]/40 backdrop-blur-sm dark:bg-gray-900/40"
       }`}
     >
       <nav className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between px-4">
-          <div className="flex-1"></div>
           <ul className="flex items-center justify-center h-12 space-x-8 text-xs">
             <motion.li
               whileHover={{ opacity: 0.7 }}
@@ -70,7 +69,7 @@ const MenuBar = () => {
               <a href="#contact">Contact</a>
             </motion.li>
           </ul>
-          <div className="flex-1 flex justify-end items-center space-x-2">
+          <div className="flex items-center space-x-2">
             <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
             <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
             <Switch
