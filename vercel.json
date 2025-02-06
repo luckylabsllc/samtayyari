@@ -1,0 +1,16 @@
+
+{
+  "redirects": [
+    {
+      "source": "www.samtayyari.com",
+      "destination": "https://samtayyari.com",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
