@@ -17,7 +17,7 @@ const Consulting = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-12">Professional Services</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white dark:bg-[#444444] p-8 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4">Legal Consulting</h3>
+              <h3 className="text-xl font-semibold mb-4">Legal Research</h3>
               <p className="text-secondary mb-6">
                 Specialized legal research for businesses and startups, focusing on corporate law and intellectual property.
               </p>
@@ -34,8 +34,8 @@ const Consulting = () => {
               </p>
               <ul className="space-y-3 text-secondary">
                 <li>• Market Entry Strategy</li>
-                <li>• Growth Planning</li>
-                <li>• Risk Management</li>
+                <li>• Product Development</li>
+                <li>• Brand Development & Marketing Strategy</li>
               </ul>
             </div>
           </div>
