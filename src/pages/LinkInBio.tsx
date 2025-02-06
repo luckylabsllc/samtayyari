@@ -1,11 +1,21 @@
 
 import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Loader2 } from "lucide-react";
+import { useState, useEffect } from "react";
 
 const LinkInBio = () => {
   const { resolvedTheme } = useTheme();
+  const [isLoading, setIsLoading] = useState(true);
   
+  useEffect(() => {
+    // Simulate a minimal loading time to ensure smooth transition
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 500);
+    return () => clearTimeout(timer);
+  }, []);
+
   const links = [
     {
       title: "Official Website",
@@ -29,11 +39,39 @@ const LinkInBio = () => {
     }
   ];
 
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
+  };
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-background text-foreground flex flex-col items-center justify-center">
+        <Loader2 className="w-8 h-8 animate-spin text-muted-foreground" />
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col items-center px-4 py-16">
       <div className="w-full max-w-xl mx-auto">
         {/* Profile Section */}
-        <div className="text-center mb-12">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-12"
+        >
           <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
             <img
               src={resolvedTheme === 'dark' 
@@ -46,19 +84,22 @@ const LinkInBio = () => {
           </div>
           <h1 className="text-2xl font-bold mb-2">Sam Tayyari</h1>
           <p className="text-muted-foreground">Entrepreneur & Legal Professional</p>
-        </div>
+        </motion.div>
 
         {/* Links Section */}
-        <div className="space-y-4">
+        <motion.div 
+          variants={container}
+          initial="hidden"
+          animate="show"
+          className="space-y-4"
+        >
           {links.map((link, index) => (
             <motion.a
               key={index}
+              variants={item}
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
               className="block w-full p-4 bg-gradient-to-r from-[#222222] to-[#333333] hover:from-[#333333] hover:to-[#444444] dark:from-[#1A1F2C] dark:to-[#2A2F3C] dark:hover:from-[#2A2F3C] dark:hover:to-[#3A3F4C] text-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
             >
               <div className="flex items-center justify-between">
@@ -70,7 +111,7 @@ const LinkInBio = () => {
               </div>
             </motion.a>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
