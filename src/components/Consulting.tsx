@@ -19,7 +19,7 @@ const Consulting = () => {
             <div className="bg-white dark:bg-[#444444] p-8 rounded-lg">
               <h3 className="text-xl font-semibold mb-4">Legal Research</h3>
               <p className="text-secondary mb-6">
-                Specialized legal research for businesses and startups, focusing on corporate law and intellectual property.
+                Specialized legal research for businesses and startups, focusing on corporate law and intellectual property. Note: Services are limited to research and do not constitute legal advice.
               </p>
               <ul className="space-y-3 text-secondary">
                 <li>• IP Strategy and Protection</li>
