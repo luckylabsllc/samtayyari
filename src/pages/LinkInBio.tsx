@@ -30,7 +30,7 @@ const LinkInBio = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white dark:bg-[#111111] flex flex-col items-center px-4 py-16">
+    <div className="min-h-screen bg-background text-foreground flex flex-col items-center px-4 py-16">
       <div className="w-full max-w-xl mx-auto">
         {/* Profile Section */}
         <div className="text-center mb-12">
@@ -44,8 +44,8 @@ const LinkInBio = () => {
               className="w-full h-full object-cover"
             />
           </div>
-          <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Sam Tayyari</h1>
-          <p className="text-gray-600 dark:text-gray-400">Entrepreneur & Legal Professional</p>
+          <h1 className="text-2xl font-bold mb-2">Sam Tayyari</h1>
+          <p className="text-muted-foreground">Entrepreneur & Legal Professional</p>
         </div>
 
         {/* Links Section */}
@@ -59,12 +59,12 @@ const LinkInBio = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              className="block w-full p-4 bg-gradient-to-r from-[#9b87f5] to-[#D6BCFA] dark:from-[#6D28D9] dark:to-[#4C1D95] text-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
+              className="block w-full p-4 bg-gradient-to-r from-[#222222] to-[#333333] hover:from-[#333333] hover:to-[#444444] dark:from-[#1A1F2C] dark:to-[#2A2F3C] dark:hover:from-[#2A2F3C] dark:hover:to-[#3A3F4C] text-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
             >
               <div className="flex items-center justify-between">
                 <div>
                   <h2 className="font-semibold">{link.title}</h2>
-                  <p className="text-sm opacity-90">{link.description}</p>
+                  <p className="text-sm text-gray-200 dark:text-gray-300">{link.description}</p>
                 </div>
                 <ExternalLink className="w-5 h-5 opacity-70 group-hover:opacity-100 transition-opacity" />
               </div>
