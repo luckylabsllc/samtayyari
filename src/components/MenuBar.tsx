@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Moon, Sun } from "lucide-react";
@@ -10,22 +9,15 @@ const navItems = [
   { label: "Contact", to: "/contact" },
 ];
 
+// Static header: same flat background as the page in both themes, no
+// entrance animation, no scroll-triggered shadow/blur/transition.
 const MenuBar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
-  }, []);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const toggleDarkMode = () => {
@@ -35,13 +27,7 @@ const MenuBar = () => {
   const isDarkMode = mounted && resolvedTheme === "dark";
 
   return (
-    <motion.header
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-[#f5f5f8]/80 backdrop-blur-md shadow-sm dark:bg-black/80" : "bg-[#f5f5f8]/40 backdrop-blur-sm dark:bg-black/40"
-      }`}
-    >
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-black">
       <nav className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between px-4 h-16">
           <Link to="/" className="font-bold text-lg dark:text-white">
@@ -67,9 +53,9 @@ const MenuBar = () => {
 
           <ul className="hidden md:flex items-center justify-center space-x-8 text-xs absolute left-1/2 transform -translate-x-1/2">
             {navItems.map((item) => (
-              <motion.li key={item.to} whileHover={{ opacity: 0.7 }}>
+              <li key={item.to} className="hover:opacity-70">
                 <Link to={item.to}>{item.label}</Link>
-              </motion.li>
+              </li>
             ))}
           </ul>
 
@@ -92,7 +78,7 @@ const MenuBar = () => {
           </div>
         )}
       </nav>
-    </motion.header>
+    </header>
   );
 };
 
