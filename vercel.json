@@ -1,0 +1,21 @@
+
+{
+  "redirects": [
+    {
+      "source": "www.samtayyari.com",
+      "destination": "https://samtayyari.com",
+      "permanent": true
+    },
+    {
+      "source": "/linkinbio",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/((?!api/).*)",
+      "destination": "/index.html"
+    }
+  ]
+}
