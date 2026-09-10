@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
-import { externalLinks } from "@/lib/site";
+import { Instagram, X as XIcon } from "lucide-react";
+import { Link } from "react-router-dom";
+import { externalLinks, socialLinks } from "@/lib/site";
 
 const Home = () => {
   return (
-    <section className="flex-1 flex flex-col items-center justify-center text-center px-6">
+    <section className="relative flex-1 flex flex-col items-center justify-center text-center px-6">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -41,6 +43,30 @@ const Home = () => {
           ))}
         </div>
       </motion.div>
+
+      <div className="absolute bottom-6 right-6 flex items-center gap-4 text-secondary text-xs">
+        <Link to="/privacy" className="hover:text-foreground transition-colors">
+          Privacy
+        </Link>
+        <a
+          href={socialLinks.x}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="X"
+          className="hover:text-foreground transition-colors"
+        >
+          <XIcon className="h-4 w-4" />
+        </a>
+        <a
+          href={socialLinks.instagram}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+          className="hover:text-foreground transition-colors"
+        >
+          <Instagram className="h-4 w-4" />
+        </a>
+      </div>
     </section>
   );
 };

@@ -5,35 +5,23 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 
+const CONTACT_EMAIL = "mrluckyweb3@gmail.com";
+
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  // No backend — this just opens the visitor's email client with the
+  // message pre-filled, addressed to CONTACT_EMAIL.
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-      if (!res.ok) throw new Error("Request failed");
-      toast({
-        title: "Message sent",
-        description: "Thanks — I'll get back to you soon.",
-      });
-      setFormData({ name: "", email: "", message: "" });
-    } catch {
-      toast({
-        title: "Something went wrong",
-        description: "Your message didn't send. Try again in a bit.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
+    const subject = `Message from ${formData.name || "your site"}`;
+    const body = `${formData.message}\n\n— ${formData.name} (${formData.email})`;
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    toast({
+      title: "Opening your email app",
+      description: "Your message is pre-filled — just hit send there.",
+    });
   };
 
   return (
@@ -76,8 +64,8 @@ const Contact = () => {
               required
             />
           </div>
-          <Button type="submit" className="w-full" disabled={isSubmitting}>
-            {isSubmitting ? "Sending…" : "Send Message"}
+          <Button type="submit" className="w-full">
+            Send Message
           </Button>
         </form>
       </div>

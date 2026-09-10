@@ -12,3 +12,12 @@ export interface ExternalLink {
 export const externalLinks: ExternalLink[] = [
   { label: "Lucky Labs", url: "https://luckylabs.org" },
 ];
+
+// Restored from git history (see Footer.tsx's full commit history).
+// Note: Instagram was only ever the generic https://instagram.com in this
+// codebase — never a profile-specific URL. Swap in the real handle when
+// you have it.
+export const socialLinks = {
+  x: "https://twitter.com/samtayyari",
+  instagram: "https://instagram.com",
+};

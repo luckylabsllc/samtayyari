@@ -30,7 +30,8 @@ const App = () => (
             <Route path="/writing/:slug" element={<WritingPost />} />
             <Route path="/video" element={<Video />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/privacy-policy" element={<Navigate to="/privacy" replace />} />
             {/* Old linktree-style slug from the Instagram bio era — home now does that job */}
             <Route path="/linkinbio" element={<Navigate to="/" replace />} />
             <Route path="*" element={<NotFound />} />

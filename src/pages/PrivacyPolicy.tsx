@@ -19,24 +19,24 @@ const PrivacyPolicy = () => {
 
       <h1 className="text-3xl font-bold mb-8">Privacy Policy</h1>
       <div className="prose dark:prose-invert">
-        <p className="mb-4">Last updated: January 2024</p>
-        
+        <p className="mb-4">Last updated: September 2026</p>
+
         <h2 className="text-xl font-semibold mt-6 mb-4">1. Introduction</h2>
         <p className="mb-4">
           This Privacy Policy describes how Sam Tayyari ("we," "us," or "our") collects, uses, and shares your personal information when you visit our website.
         </p>
 
         <h2 className="text-xl font-semibold mt-6 mb-4">2. Information We Collect</h2>
-        <p className="mb-4">
+        <div className="mb-4">
           We collect information that you provide directly to us, including:
           <ul className="list-disc pl-6 mt-2">
             <li>Contact information (such as name and email address)</li>
             <li>Communications you send to us</li>
           </ul>
-        </p>
+        </div>
 
         <h2 className="text-xl font-semibold mt-6 mb-4">3. How We Use Your Information</h2>
-        <p className="mb-4">
+        <div className="mb-4">
           We use the information we collect to:
           <ul className="list-disc pl-6 mt-2">
             <li>Respond to your inquiries</li>
@@ -44,7 +44,7 @@ const PrivacyPolicy = () => {
             <li>Send you updates and marketing communications</li>
             <li>Improve our website and services</li>
           </ul>
-        </p>
+        </div>
 
         <h2 className="text-xl font-semibold mt-6 mb-4">4. Contact Us</h2>
         <p className="mb-4">
