@@ -11,9 +11,4 @@ export interface ExternalLink {
 
 export const externalLinks: ExternalLink[] = [
   { label: "Lucky Labs", url: "https://luckylabs.org" },
-  { label: "Cheereal", url: "https://cheereal.com" },
-  { label: "Chulu", url: "https://chulu.co" },
-  { label: "Overseas", url: "https://apps.apple.com/us/app/overseas/id6747011386" },
-  // Moving to labcoat.tools shortly — update this one line when it does.
-  { label: "LABCOAT", url: "https://labcoat.app" },
 ];

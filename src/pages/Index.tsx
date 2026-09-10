@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white dark:bg-[#111111] transition-colors duration-300">
+    <div className="min-h-screen flex flex-col bg-white dark:bg-black transition-colors duration-300">
       <MenuBar />
       <Home />
       <Footer />

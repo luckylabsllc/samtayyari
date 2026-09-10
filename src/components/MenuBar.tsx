@@ -39,7 +39,7 @@ const MenuBar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-[#f5f5f8]/80 backdrop-blur-md shadow-sm dark:bg-gray-900/80" : "bg-[#f5f5f8]/40 backdrop-blur-sm dark:bg-gray-900/40"
+        isScrolled ? "bg-[#f5f5f8]/80 backdrop-blur-md shadow-sm dark:bg-black/80" : "bg-[#f5f5f8]/40 backdrop-blur-sm dark:bg-black/40"
       }`}
     >
       <nav className="max-w-7xl mx-auto">
@@ -79,7 +79,7 @@ const MenuBar = () => {
         </div>
 
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-white dark:bg-gray-900 shadow-lg">
+          <div className="md:hidden bg-white dark:bg-black shadow-lg">
             <ul className="px-4 py-2 space-y-2">
               {navItems.map((item) => (
                 <li key={item.to} className="py-2">

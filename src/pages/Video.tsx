@@ -18,7 +18,7 @@ const Video = () => {
               const embedUrl = getEmbedUrl(video.url);
               return (
                 <div key={video.url}>
-                  <div className="aspect-video w-full rounded-lg overflow-hidden bg-accent dark:bg-[#222222]">
+                  <div className="aspect-video w-full rounded-lg overflow-hidden bg-accent dark:bg-secondary">
                     {embedUrl ? (
                       <iframe
                         src={embedUrl}
