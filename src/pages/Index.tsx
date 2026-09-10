@@ -1,13 +1,13 @@
 import MenuBar from "@/components/MenuBar";
 import Home from "@/components/Home";
-import Footer from "@/components/Footer";
 
+// One screen, no scroll: fixed header + centered content filling the rest
+// of the viewport exactly.
 const Index = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-white dark:bg-black transition-colors duration-300">
+    <div className="h-screen flex flex-col overflow-hidden bg-white dark:bg-black transition-colors duration-300">
       <MenuBar />
       <Home />
-      <Footer />
     </div>
   );
 };

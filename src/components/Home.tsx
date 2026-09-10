@@ -3,12 +3,12 @@ import { externalLinks } from "@/lib/site";
 
 const Home = () => {
   return (
-    <section className="flex-1 flex flex-col justify-center px-6 md:px-12">
+    <section className="flex-1 flex flex-col items-center justify-center text-center px-6">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="max-w-xl"
+        className="max-w-xl flex flex-col items-center"
       >
         <div className="w-[90px] h-[90px] md:w-[100px] md:h-[100px] rounded-full overflow-hidden mb-6">
           <img
@@ -21,7 +21,7 @@ const Home = () => {
           Sam Tayyari
         </h1>
 
-        <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm">
+        <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-sm">
           {externalLinks.map((link, i) => (
             <span key={link.label} className="flex items-center gap-x-2">
               <a
